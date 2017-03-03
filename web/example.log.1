@@ -1,0 +1,790 @@
+DEBUG main org.hibernate.cfg.beanvalidation.TypeSafeActivator - Unable to acquire Bean Validation ValidatorFactory, skipping activation
+DEBUG main org.hibernate.secure.spi.JaccIntegrator - Skipping JACC integration as it was not enabled
+DEBUG main org.hibernate.boot.internal.ClassLoaderAccessImpl - Not known whether passed class name [br.com.sj7.wish.business.domain.entity.UserRole] is safe
+DEBUG main org.hibernate.boot.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : br.com.sj7.wish.business.domain.entity.UserRole
+DEBUG main org.eclipse.jetty.webapp.WebAppClassLoader - loaded class org.hibernate.type.EnumType from sun.misc.Launcher$AppClassLoader@73d16e93
+DEBUG main org.eclipse.jetty.webapp.WebAppClassLoader - loaded class org.hibernate.type.EnumType from sun.misc.Launcher$AppClassLoader@73d16e93
+DEBUG main org.hibernate.boot.internal.ClassLoaderAccessImpl - Not known whether passed class name [br.com.sj7.wish.business.domain.entity.UserRole] is safe
+DEBUG main org.hibernate.boot.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : br.com.sj7.wish.business.domain.entity.UserRole
+DEBUG main org.eclipse.jetty.webapp.WebAppClassLoader - loaded class org.hibernate.type.EnumType from sun.misc.Launcher$AppClassLoader@73d16e93
+DEBUG main org.eclipse.jetty.webapp.WebAppClassLoader - loaded class org.hibernate.type.EnumType from sun.misc.Launcher$AppClassLoader@73d16e93
+DEBUG main org.hibernate.boot.internal.ClassLoaderAccessImpl - Not known whether passed class name [br.com.sj7.wish.business.domain.entity.User] is safe
+DEBUG main org.hibernate.boot.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : br.com.sj7.wish.business.domain.entity.User
+DEBUG main org.hibernate.boot.internal.ClassLoaderAccessImpl - Not known whether passed class name [br.com.sj7.wish.business.domain.entity.User] is safe
+DEBUG main org.hibernate.boot.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : br.com.sj7.wish.business.domain.entity.User
+DEBUG main org.hibernate.persister.entity.AbstractEntityPersister - Static SQL for entity: br.com.sj7.wish.business.domain.entity.UserRole
+DEBUG main org.hibernate.persister.entity.AbstractEntityPersister -  Version select: select urr_id from urr_user_role where urr_id =?
+DEBUG main org.hibernate.persister.entity.AbstractEntityPersister -  Snapshot select: select userrole_.urr_id, userrole_.urr_tp_role as urr_tp_r2_0_, userrole_.usr_id as usr_id3_0_ from urr_user_role userrole_ where userrole_.urr_id=?
+DEBUG main org.hibernate.persister.entity.AbstractEntityPersister -  Insert 0: insert into urr_user_role (urr_tp_role, usr_id, urr_id) values (?, ?, ?)
+DEBUG main org.hibernate.persister.entity.AbstractEntityPersister -  Update 0: update urr_user_role set urr_tp_role=?, usr_id=? where urr_id=?
+DEBUG main org.hibernate.persister.entity.AbstractEntityPersister -  Delete 0: delete from urr_user_role where urr_id=?
+DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@78dc4696]
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : role
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : user
+DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4f7c0be3]
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : user.email
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : user.enabled
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : user.locked
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : user.password
+DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=br.com.sj7.wish.business.domain.entity.UserRole)
+    - Returns
+       - EntityReturnImpl(entity=br.com.sj7.wish.business.domain.entity.UserRole, querySpaceUid=<gen:0>, path=br.com.sj7.wish.business.domain.entity.UserRole)
+          - EntityAttributeFetchImpl(entity=br.com.sj7.wish.business.domain.entity.User, querySpaceUid=<gen:1>, path=br.com.sj7.wish.business.domain.entity.UserRole.user)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.sj7.wish.business.domain.entity.UserRole)
+          - SQL table alias mapping - userrole0_
+          - alias suffix - 0_
+          - suffixed key columns - {urr_id1_0_0_}
+          - JOIN (JoinDefinedByMetadata(user)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=br.com.sj7.wish.business.domain.entity.User)
+                - SQL table alias mapping - user1_
+                - alias suffix - 1_
+                - suffixed key columns - {usr_id1_1_1_}
+
+DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity br.com.sj7.wish.business.domain.entity.UserRole [NONE]: select userrole0_.urr_id as urr_id1_0_0_, userrole0_.urr_tp_role as urr_tp_r2_0_0_, userrole0_.usr_id as usr_id3_0_0_, user1_.usr_id as usr_id1_1_1_, user1_.usr_vl_email as usr_vl_e2_1_1_, user1_.usr_ib_enabled as usr_ib_e3_1_1_, user1_.usr_ib_locked as usr_ib_l4_1_1_, user1_.usr_vl_pw as usr_vl_p5_1_1_ from urr_user_role userrole0_ inner join usr_user user1_ on userrole0_.usr_id=user1_.usr_id where userrole0_.urr_id=?
+DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4d6f623d]
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : role
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : user
+DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@e93f3d5]
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : user.email
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : user.enabled
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : user.locked
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : user.password
+DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=br.com.sj7.wish.business.domain.entity.UserRole)
+    - Returns
+       - EntityReturnImpl(entity=br.com.sj7.wish.business.domain.entity.UserRole, querySpaceUid=<gen:0>, path=br.com.sj7.wish.business.domain.entity.UserRole)
+          - EntityAttributeFetchImpl(entity=br.com.sj7.wish.business.domain.entity.User, querySpaceUid=<gen:1>, path=br.com.sj7.wish.business.domain.entity.UserRole.user)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.sj7.wish.business.domain.entity.UserRole)
+          - SQL table alias mapping - userrole0_
+          - alias suffix - 0_
+          - suffixed key columns - {urr_id1_0_0_}
+          - JOIN (JoinDefinedByMetadata(user)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=br.com.sj7.wish.business.domain.entity.User)
+                - SQL table alias mapping - user1_
+                - alias suffix - 1_
+                - suffixed key columns - {usr_id1_1_1_}
+
+DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity br.com.sj7.wish.business.domain.entity.UserRole [READ]: select userrole0_.urr_id as urr_id1_0_0_, userrole0_.urr_tp_role as urr_tp_r2_0_0_, userrole0_.usr_id as usr_id3_0_0_, user1_.usr_id as usr_id1_1_1_, user1_.usr_vl_email as usr_vl_e2_1_1_, user1_.usr_ib_enabled as usr_ib_e3_1_1_, user1_.usr_ib_locked as usr_ib_l4_1_1_, user1_.usr_vl_pw as usr_vl_p5_1_1_ from urr_user_role userrole0_ inner join usr_user user1_ on userrole0_.usr_id=user1_.usr_id where userrole0_.urr_id=?
+DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7a26928a]
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : role
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : user
+DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7180e701]
+DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=br.com.sj7.wish.business.domain.entity.UserRole)
+    - Returns
+       - EntityReturnImpl(entity=br.com.sj7.wish.business.domain.entity.UserRole, querySpaceUid=<gen:0>, path=br.com.sj7.wish.business.domain.entity.UserRole)
+          - EntityAttributeFetchImpl(entity=br.com.sj7.wish.business.domain.entity.User, querySpaceUid=<gen:1>, path=br.com.sj7.wish.business.domain.entity.UserRole.user)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.sj7.wish.business.domain.entity.UserRole)
+          - SQL table alias mapping - userrole0_
+          - alias suffix - 0_
+          - suffixed key columns - {urr_id1_0_0_}
+
+DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity br.com.sj7.wish.business.domain.entity.UserRole [UPGRADE]: select userrole0_.urr_id as urr_id1_0_0_, userrole0_.urr_tp_role as urr_tp_r2_0_0_, userrole0_.usr_id as usr_id3_0_0_ from urr_user_role userrole0_ where userrole0_.urr_id=? for update
+DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4e2c95ee]
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : role
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : user
+DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5a5c128]
+DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=br.com.sj7.wish.business.domain.entity.UserRole)
+    - Returns
+       - EntityReturnImpl(entity=br.com.sj7.wish.business.domain.entity.UserRole, querySpaceUid=<gen:0>, path=br.com.sj7.wish.business.domain.entity.UserRole)
+          - EntityAttributeFetchImpl(entity=br.com.sj7.wish.business.domain.entity.User, querySpaceUid=<gen:1>, path=br.com.sj7.wish.business.domain.entity.UserRole.user)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.sj7.wish.business.domain.entity.UserRole)
+          - SQL table alias mapping - userrole0_
+          - alias suffix - 0_
+          - suffixed key columns - {urr_id1_0_0_}
+
+DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity br.com.sj7.wish.business.domain.entity.UserRole [UPGRADE_NOWAIT]: select userrole0_.urr_id as urr_id1_0_0_, userrole0_.urr_tp_role as urr_tp_r2_0_0_, userrole0_.usr_id as usr_id3_0_0_ from urr_user_role userrole0_ where userrole0_.urr_id=? for update nowait 
+DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@73eb8672]
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : role
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : user
+DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5e76a2bb]
+DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=br.com.sj7.wish.business.domain.entity.UserRole)
+    - Returns
+       - EntityReturnImpl(entity=br.com.sj7.wish.business.domain.entity.UserRole, querySpaceUid=<gen:0>, path=br.com.sj7.wish.business.domain.entity.UserRole)
+          - EntityAttributeFetchImpl(entity=br.com.sj7.wish.business.domain.entity.User, querySpaceUid=<gen:1>, path=br.com.sj7.wish.business.domain.entity.UserRole.user)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.sj7.wish.business.domain.entity.UserRole)
+          - SQL table alias mapping - userrole0_
+          - alias suffix - 0_
+          - suffixed key columns - {urr_id1_0_0_}
+
+DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity br.com.sj7.wish.business.domain.entity.UserRole [UPGRADE_SKIPLOCKED]: select userrole0_.urr_id as urr_id1_0_0_, userrole0_.urr_tp_role as urr_tp_r2_0_0_, userrole0_.usr_id as usr_id3_0_0_ from urr_user_role userrole0_ where userrole0_.urr_id=? for update
+DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@757194dc]
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : role
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : user
+DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@14faa38c]
+DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=br.com.sj7.wish.business.domain.entity.UserRole)
+    - Returns
+       - EntityReturnImpl(entity=br.com.sj7.wish.business.domain.entity.UserRole, querySpaceUid=<gen:0>, path=br.com.sj7.wish.business.domain.entity.UserRole)
+          - EntityAttributeFetchImpl(entity=br.com.sj7.wish.business.domain.entity.User, querySpaceUid=<gen:1>, path=br.com.sj7.wish.business.domain.entity.UserRole.user)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.sj7.wish.business.domain.entity.UserRole)
+          - SQL table alias mapping - userrole0_
+          - alias suffix - 0_
+          - suffixed key columns - {urr_id1_0_0_}
+
+DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity br.com.sj7.wish.business.domain.entity.UserRole [FORCE]: select userrole0_.urr_id as urr_id1_0_0_, userrole0_.urr_tp_role as urr_tp_r2_0_0_, userrole0_.usr_id as usr_id3_0_0_ from urr_user_role userrole0_ where userrole0_.urr_id=? for update nowait 
+DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7ff2b8d2]
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : role
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : user
+DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6e92c6ad]
+DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=br.com.sj7.wish.business.domain.entity.UserRole)
+    - Returns
+       - EntityReturnImpl(entity=br.com.sj7.wish.business.domain.entity.UserRole, querySpaceUid=<gen:0>, path=br.com.sj7.wish.business.domain.entity.UserRole)
+          - EntityAttributeFetchImpl(entity=br.com.sj7.wish.business.domain.entity.User, querySpaceUid=<gen:1>, path=br.com.sj7.wish.business.domain.entity.UserRole.user)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.sj7.wish.business.domain.entity.UserRole)
+          - SQL table alias mapping - userrole0_
+          - alias suffix - 0_
+          - suffixed key columns - {urr_id1_0_0_}
+
+DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity br.com.sj7.wish.business.domain.entity.UserRole [PESSIMISTIC_READ]: select userrole0_.urr_id as urr_id1_0_0_, userrole0_.urr_tp_role as urr_tp_r2_0_0_, userrole0_.usr_id as usr_id3_0_0_ from urr_user_role userrole0_ where userrole0_.urr_id=? for share
+DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2fb5fe30]
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : role
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : user
+DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2375b321]
+DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=br.com.sj7.wish.business.domain.entity.UserRole)
+    - Returns
+       - EntityReturnImpl(entity=br.com.sj7.wish.business.domain.entity.UserRole, querySpaceUid=<gen:0>, path=br.com.sj7.wish.business.domain.entity.UserRole)
+          - EntityAttributeFetchImpl(entity=br.com.sj7.wish.business.domain.entity.User, querySpaceUid=<gen:1>, path=br.com.sj7.wish.business.domain.entity.UserRole.user)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.sj7.wish.business.domain.entity.UserRole)
+          - SQL table alias mapping - userrole0_
+          - alias suffix - 0_
+          - suffixed key columns - {urr_id1_0_0_}
+
+DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity br.com.sj7.wish.business.domain.entity.UserRole [PESSIMISTIC_WRITE]: select userrole0_.urr_id as urr_id1_0_0_, userrole0_.urr_tp_role as urr_tp_r2_0_0_, userrole0_.usr_id as usr_id3_0_0_ from urr_user_role userrole0_ where userrole0_.urr_id=? for update
+DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5baaae4c]
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : role
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : user
+DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@41a6d121]
+DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=br.com.sj7.wish.business.domain.entity.UserRole)
+    - Returns
+       - EntityReturnImpl(entity=br.com.sj7.wish.business.domain.entity.UserRole, querySpaceUid=<gen:0>, path=br.com.sj7.wish.business.domain.entity.UserRole)
+          - EntityAttributeFetchImpl(entity=br.com.sj7.wish.business.domain.entity.User, querySpaceUid=<gen:1>, path=br.com.sj7.wish.business.domain.entity.UserRole.user)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.sj7.wish.business.domain.entity.UserRole)
+          - SQL table alias mapping - userrole0_
+          - alias suffix - 0_
+          - suffixed key columns - {urr_id1_0_0_}
+
+DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity br.com.sj7.wish.business.domain.entity.UserRole [PESSIMISTIC_FORCE_INCREMENT]: select userrole0_.urr_id as urr_id1_0_0_, userrole0_.urr_tp_role as urr_tp_r2_0_0_, userrole0_.usr_id as usr_id3_0_0_ from urr_user_role userrole0_ where userrole0_.urr_id=? for update nowait 
+DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4f449e8f]
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : role
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : user
+DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6e28bb87]
+DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=br.com.sj7.wish.business.domain.entity.UserRole)
+    - Returns
+       - EntityReturnImpl(entity=br.com.sj7.wish.business.domain.entity.UserRole, querySpaceUid=<gen:0>, path=br.com.sj7.wish.business.domain.entity.UserRole)
+          - EntityAttributeFetchImpl(entity=br.com.sj7.wish.business.domain.entity.User, querySpaceUid=<gen:1>, path=br.com.sj7.wish.business.domain.entity.UserRole.user)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.sj7.wish.business.domain.entity.UserRole)
+          - SQL table alias mapping - userrole0_
+          - alias suffix - 0_
+          - suffixed key columns - {urr_id1_0_0_}
+
+DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity br.com.sj7.wish.business.domain.entity.UserRole [OPTIMISTIC]: select userrole0_.urr_id as urr_id1_0_0_, userrole0_.urr_tp_role as urr_tp_r2_0_0_, userrole0_.usr_id as usr_id3_0_0_ from urr_user_role userrole0_ where userrole0_.urr_id=?
+DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@19f040ba]
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : role
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : user
+DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@27e32fe4]
+DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=br.com.sj7.wish.business.domain.entity.UserRole)
+    - Returns
+       - EntityReturnImpl(entity=br.com.sj7.wish.business.domain.entity.UserRole, querySpaceUid=<gen:0>, path=br.com.sj7.wish.business.domain.entity.UserRole)
+          - EntityAttributeFetchImpl(entity=br.com.sj7.wish.business.domain.entity.User, querySpaceUid=<gen:1>, path=br.com.sj7.wish.business.domain.entity.UserRole.user)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.sj7.wish.business.domain.entity.UserRole)
+          - SQL table alias mapping - userrole0_
+          - alias suffix - 0_
+          - suffixed key columns - {urr_id1_0_0_}
+
+DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity br.com.sj7.wish.business.domain.entity.UserRole [OPTIMISTIC_FORCE_INCREMENT]: select userrole0_.urr_id as urr_id1_0_0_, userrole0_.urr_tp_role as urr_tp_r2_0_0_, userrole0_.usr_id as usr_id3_0_0_ from urr_user_role userrole0_ where userrole0_.urr_id=?
+DEBUG main org.hibernate.loader.Loader - Static select for action ACTION_MERGE on entity br.com.sj7.wish.business.domain.entity.UserRole: select userrole0_.urr_id as urr_id1_0_0_, userrole0_.urr_tp_role as urr_tp_r2_0_0_, userrole0_.usr_id as usr_id3_0_0_ from urr_user_role userrole0_ where userrole0_.urr_id=?
+DEBUG main org.hibernate.loader.Loader - Static select for action ACTION_REFRESH on entity br.com.sj7.wish.business.domain.entity.UserRole: select userrole0_.urr_id as urr_id1_0_0_, userrole0_.urr_tp_role as urr_tp_r2_0_0_, userrole0_.usr_id as usr_id3_0_0_ from urr_user_role userrole0_ where userrole0_.urr_id=?
+DEBUG main org.hibernate.persister.entity.AbstractEntityPersister - Static SQL for entity: br.com.sj7.wish.business.domain.entity.User
+DEBUG main org.hibernate.persister.entity.AbstractEntityPersister -  Version select: select usr_id from usr_user where usr_id =?
+DEBUG main org.hibernate.persister.entity.AbstractEntityPersister -  Snapshot select: select user_.usr_id, user_.usr_vl_email as usr_vl_e2_1_, user_.usr_ib_enabled as usr_ib_e3_1_, user_.usr_ib_locked as usr_ib_l4_1_, user_.usr_vl_pw as usr_vl_p5_1_ from usr_user user_ where user_.usr_id=?
+DEBUG main org.hibernate.persister.entity.AbstractEntityPersister -  Insert 0: insert into usr_user (usr_vl_email, usr_ib_enabled, usr_ib_locked, usr_vl_pw, usr_id) values (?, ?, ?, ?, ?)
+DEBUG main org.hibernate.persister.entity.AbstractEntityPersister -  Update 0: update usr_user set usr_vl_email=?, usr_ib_enabled=?, usr_ib_locked=?, usr_vl_pw=? where usr_id=?
+DEBUG main org.hibernate.persister.entity.AbstractEntityPersister -  Delete 0: delete from usr_user where usr_id=?
+DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@53667cbe]
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : email
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : enabled
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : locked
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : password
+DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=br.com.sj7.wish.business.domain.entity.User)
+    - Returns
+       - EntityReturnImpl(entity=br.com.sj7.wish.business.domain.entity.User, querySpaceUid=<gen:0>, path=br.com.sj7.wish.business.domain.entity.User)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.sj7.wish.business.domain.entity.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {usr_id1_1_0_}
+
+DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity br.com.sj7.wish.business.domain.entity.User [NONE]: select user0_.usr_id as usr_id1_1_0_, user0_.usr_vl_email as usr_vl_e2_1_0_, user0_.usr_ib_enabled as usr_ib_e3_1_0_, user0_.usr_ib_locked as usr_ib_l4_1_0_, user0_.usr_vl_pw as usr_vl_p5_1_0_ from usr_user user0_ where user0_.usr_id=?
+DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6eafb10e]
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : email
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : enabled
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : locked
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : password
+DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=br.com.sj7.wish.business.domain.entity.User)
+    - Returns
+       - EntityReturnImpl(entity=br.com.sj7.wish.business.domain.entity.User, querySpaceUid=<gen:0>, path=br.com.sj7.wish.business.domain.entity.User)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.sj7.wish.business.domain.entity.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {usr_id1_1_0_}
+
+DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity br.com.sj7.wish.business.domain.entity.User [READ]: select user0_.usr_id as usr_id1_1_0_, user0_.usr_vl_email as usr_vl_e2_1_0_, user0_.usr_ib_enabled as usr_ib_e3_1_0_, user0_.usr_ib_locked as usr_ib_l4_1_0_, user0_.usr_vl_pw as usr_vl_p5_1_0_ from usr_user user0_ where user0_.usr_id=?
+DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@464a4442]
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : email
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : enabled
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : locked
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : password
+DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=br.com.sj7.wish.business.domain.entity.User)
+    - Returns
+       - EntityReturnImpl(entity=br.com.sj7.wish.business.domain.entity.User, querySpaceUid=<gen:0>, path=br.com.sj7.wish.business.domain.entity.User)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.sj7.wish.business.domain.entity.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {usr_id1_1_0_}
+
+DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity br.com.sj7.wish.business.domain.entity.User [UPGRADE]: select user0_.usr_id as usr_id1_1_0_, user0_.usr_vl_email as usr_vl_e2_1_0_, user0_.usr_ib_enabled as usr_ib_e3_1_0_, user0_.usr_ib_locked as usr_ib_l4_1_0_, user0_.usr_vl_pw as usr_vl_p5_1_0_ from usr_user user0_ where user0_.usr_id=? for update
+DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3bc735b3]
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : email
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : enabled
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : locked
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : password
+DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=br.com.sj7.wish.business.domain.entity.User)
+    - Returns
+       - EntityReturnImpl(entity=br.com.sj7.wish.business.domain.entity.User, querySpaceUid=<gen:0>, path=br.com.sj7.wish.business.domain.entity.User)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.sj7.wish.business.domain.entity.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {usr_id1_1_0_}
+
+DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity br.com.sj7.wish.business.domain.entity.User [UPGRADE_NOWAIT]: select user0_.usr_id as usr_id1_1_0_, user0_.usr_vl_email as usr_vl_e2_1_0_, user0_.usr_ib_enabled as usr_ib_e3_1_0_, user0_.usr_ib_locked as usr_ib_l4_1_0_, user0_.usr_vl_pw as usr_vl_p5_1_0_ from usr_user user0_ where user0_.usr_id=? for update nowait 
+DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4303b7f0]
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : email
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : enabled
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : locked
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : password
+DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=br.com.sj7.wish.business.domain.entity.User)
+    - Returns
+       - EntityReturnImpl(entity=br.com.sj7.wish.business.domain.entity.User, querySpaceUid=<gen:0>, path=br.com.sj7.wish.business.domain.entity.User)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.sj7.wish.business.domain.entity.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {usr_id1_1_0_}
+
+DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity br.com.sj7.wish.business.domain.entity.User [UPGRADE_SKIPLOCKED]: select user0_.usr_id as usr_id1_1_0_, user0_.usr_vl_email as usr_vl_e2_1_0_, user0_.usr_ib_enabled as usr_ib_e3_1_0_, user0_.usr_ib_locked as usr_ib_l4_1_0_, user0_.usr_vl_pw as usr_vl_p5_1_0_ from usr_user user0_ where user0_.usr_id=? for update
+DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5c41d037]
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : email
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : enabled
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : locked
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : password
+DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=br.com.sj7.wish.business.domain.entity.User)
+    - Returns
+       - EntityReturnImpl(entity=br.com.sj7.wish.business.domain.entity.User, querySpaceUid=<gen:0>, path=br.com.sj7.wish.business.domain.entity.User)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.sj7.wish.business.domain.entity.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {usr_id1_1_0_}
+
+DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity br.com.sj7.wish.business.domain.entity.User [FORCE]: select user0_.usr_id as usr_id1_1_0_, user0_.usr_vl_email as usr_vl_e2_1_0_, user0_.usr_ib_enabled as usr_ib_e3_1_0_, user0_.usr_ib_locked as usr_ib_l4_1_0_, user0_.usr_vl_pw as usr_vl_p5_1_0_ from usr_user user0_ where user0_.usr_id=? for update nowait 
+DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5ec77191]
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : email
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : enabled
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : locked
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : password
+DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=br.com.sj7.wish.business.domain.entity.User)
+    - Returns
+       - EntityReturnImpl(entity=br.com.sj7.wish.business.domain.entity.User, querySpaceUid=<gen:0>, path=br.com.sj7.wish.business.domain.entity.User)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.sj7.wish.business.domain.entity.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {usr_id1_1_0_}
+
+DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity br.com.sj7.wish.business.domain.entity.User [PESSIMISTIC_READ]: select user0_.usr_id as usr_id1_1_0_, user0_.usr_vl_email as usr_vl_e2_1_0_, user0_.usr_ib_enabled as usr_ib_e3_1_0_, user0_.usr_ib_locked as usr_ib_l4_1_0_, user0_.usr_vl_pw as usr_vl_p5_1_0_ from usr_user user0_ where user0_.usr_id=? for share
+DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1450078a]
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : email
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : enabled
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : locked
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : password
+DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=br.com.sj7.wish.business.domain.entity.User)
+    - Returns
+       - EntityReturnImpl(entity=br.com.sj7.wish.business.domain.entity.User, querySpaceUid=<gen:0>, path=br.com.sj7.wish.business.domain.entity.User)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.sj7.wish.business.domain.entity.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {usr_id1_1_0_}
+
+DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity br.com.sj7.wish.business.domain.entity.User [PESSIMISTIC_WRITE]: select user0_.usr_id as usr_id1_1_0_, user0_.usr_vl_email as usr_vl_e2_1_0_, user0_.usr_ib_enabled as usr_ib_e3_1_0_, user0_.usr_ib_locked as usr_ib_l4_1_0_, user0_.usr_vl_pw as usr_vl_p5_1_0_ from usr_user user0_ where user0_.usr_id=? for update
+DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@69c6161d]
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : email
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : enabled
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : locked
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : password
+DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=br.com.sj7.wish.business.domain.entity.User)
+    - Returns
+       - EntityReturnImpl(entity=br.com.sj7.wish.business.domain.entity.User, querySpaceUid=<gen:0>, path=br.com.sj7.wish.business.domain.entity.User)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.sj7.wish.business.domain.entity.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {usr_id1_1_0_}
+
+DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity br.com.sj7.wish.business.domain.entity.User [PESSIMISTIC_FORCE_INCREMENT]: select user0_.usr_id as usr_id1_1_0_, user0_.usr_vl_email as usr_vl_e2_1_0_, user0_.usr_ib_enabled as usr_ib_e3_1_0_, user0_.usr_ib_locked as usr_ib_l4_1_0_, user0_.usr_vl_pw as usr_vl_p5_1_0_ from usr_user user0_ where user0_.usr_id=? for update nowait 
+DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2e1792e7]
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : email
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : enabled
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : locked
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : password
+DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=br.com.sj7.wish.business.domain.entity.User)
+    - Returns
+       - EntityReturnImpl(entity=br.com.sj7.wish.business.domain.entity.User, querySpaceUid=<gen:0>, path=br.com.sj7.wish.business.domain.entity.User)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.sj7.wish.business.domain.entity.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {usr_id1_1_0_}
+
+DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity br.com.sj7.wish.business.domain.entity.User [OPTIMISTIC]: select user0_.usr_id as usr_id1_1_0_, user0_.usr_vl_email as usr_vl_e2_1_0_, user0_.usr_ib_enabled as usr_ib_e3_1_0_, user0_.usr_ib_locked as usr_ib_l4_1_0_, user0_.usr_vl_pw as usr_vl_p5_1_0_ from usr_user user0_ where user0_.usr_id=?
+DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3eb631b8]
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : email
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : enabled
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : locked
+DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : password
+DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
+DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
+DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=br.com.sj7.wish.business.domain.entity.User)
+    - Returns
+       - EntityReturnImpl(entity=br.com.sj7.wish.business.domain.entity.User, querySpaceUid=<gen:0>, path=br.com.sj7.wish.business.domain.entity.User)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=br.com.sj7.wish.business.domain.entity.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {usr_id1_1_0_}
+
+DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity br.com.sj7.wish.business.domain.entity.User [OPTIMISTIC_FORCE_INCREMENT]: select user0_.usr_id as usr_id1_1_0_, user0_.usr_vl_email as usr_vl_e2_1_0_, user0_.usr_ib_enabled as usr_ib_e3_1_0_, user0_.usr_ib_locked as usr_ib_l4_1_0_, user0_.usr_vl_pw as usr_vl_p5_1_0_ from usr_user user0_ where user0_.usr_id=?
+DEBUG main org.hibernate.loader.Loader - Static select for action ACTION_MERGE on entity br.com.sj7.wish.business.domain.entity.User: select user0_.usr_id as usr_id1_1_0_, user0_.usr_vl_email as usr_vl_e2_1_0_, user0_.usr_ib_enabled as usr_ib_e3_1_0_, user0_.usr_ib_locked as usr_ib_l4_1_0_, user0_.usr_vl_pw as usr_vl_p5_1_0_ from usr_user user0_ where user0_.usr_id=?
+DEBUG main org.hibernate.loader.Loader - Static select for action ACTION_REFRESH on entity br.com.sj7.wish.business.domain.entity.User: select user0_.usr_id as usr_id1_1_0_, user0_.usr_vl_email as usr_vl_e2_1_0_, user0_.usr_ib_enabled as usr_ib_e3_1_0_, user0_.usr_ib_locked as usr_ib_l4_1_0_, user0_.usr_vl_pw as usr_vl_p5_1_0_ from usr_user user0_ where user0_.usr_id=?
+DEBUG main org.hibernate.internal.SessionFactoryImpl - Instantiated session factory
+DEBUG main org.hibernate.internal.NamedQueryRepository - Checking 0 named HQL queries
+DEBUG main org.hibernate.internal.NamedQueryRepository - Checking 0 named SQL queries
+DEBUG main org.hibernate.internal.SessionFactoryRegistry - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@272a179c
+DEBUG main org.hibernate.internal.SessionFactoryRegistry - Registering SessionFactory: 4906464e-b0e0-4a1e-95aa-a6bf20c63699 (<unnamed>)
+DEBUG main org.hibernate.internal.SessionFactoryRegistry - Not binding SessionFactory to JNDI, no JNDI name configured
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'sessionFactory'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'wicketApplication'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'wicketApplication'
+DEBUG main org.eclipse.jetty.webapp.WebAppClassLoader - loaded class br.com.sj7.wish.web.wicket.app.ConfiguracaoAplicacaoWeb from sun.misc.Launcher$AppClassLoader@73d16e93
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'wicketApplication' to allow for resolving potential circular references
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'wicketApplication'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory' to allow for resolving potential circular references
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.transaction.interceptor.TransactionInterceptor#0'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.transaction.interceptor.TransactionInterceptor#0'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.transaction.interceptor.TransactionInterceptor#0' to allow for resolving potential circular references
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Invoking afterPropertiesSet() on bean with name 'org.springframework.transaction.interceptor.TransactionInterceptor#0'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.transaction.interceptor.TransactionInterceptor#0'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'hibernateDAO'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'hibernateDAO'
+DEBUG main org.eclipse.jetty.webapp.WebAppClassLoader - loaded class br.com.sj7.wish.business.persistence.dao.HibernateDAO from sun.misc.Launcher$AppClassLoader@73d16e93
+DEBUG main org.springframework.beans.factory.annotation.InjectionMetadata - Registered injected element on class [br.com.sj7.wish.business.persistence.dao.HibernateDAO]: AutowiredFieldElement for private org.hibernate.SessionFactory br.com.sj7.wish.business.persistence.dao.HibernateDAO.sessionFactory
+DEBUG main org.springframework.beans.factory.annotation.InjectionMetadata - Registered injected element on class [br.com.sj7.wish.business.persistence.dao.HibernateDAO]: AutowiredFieldElement for private javax.sql.DataSource br.com.sj7.wish.business.persistence.dao.HibernateDAO.dataSource
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'hibernateDAO' to allow for resolving potential circular references
+DEBUG main org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected element of bean 'hibernateDAO': AutowiredFieldElement for private org.hibernate.SessionFactory br.com.sj7.wish.business.persistence.dao.HibernateDAO.sessionFactory
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'sessionFactory'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG main org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowiring by type from bean name 'hibernateDAO' to bean named 'sessionFactory'
+DEBUG main org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected element of bean 'hibernateDAO': AutowiredFieldElement for private javax.sql.DataSource br.com.sj7.wish.business.persistence.dao.HibernateDAO.dataSource
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'dataSource'
+DEBUG main org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowiring by type from bean name 'hibernateDAO' to bean named 'dataSource'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'hibernateDAO'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'userService'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'userService'
+DEBUG main org.eclipse.jetty.webapp.WebAppClassLoader - loaded class br.com.sj7.wish.business.service.UserService from sun.misc.Launcher$AppClassLoader@73d16e93
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'userService' to allow for resolving potential circular references
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'userService'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.event.internalEventListenerProcessor'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.event.internalEventListenerProcessor' to allow for resolving potential circular references
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.event.internalEventListenerProcessor'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating instance of bean 'org.springframework.context.event.internalEventListenerFactory'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Eagerly caching bean 'org.springframework.context.event.internalEventListenerFactory' to allow for resolving potential circular references
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Finished creating instance of bean 'org.springframework.context.event.internalEventListenerFactory'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionalEventListenerFactory'
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
+DEBUG main org.springframework.web.context.support.XmlWebApplicationContext - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@7bde1f3a]
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
+DEBUG main org.springframework.core.env.PropertySourcesPropertyResolver - Searching for key 'spring.liveBeansView.mbeanDomain' in [servletConfigInitParams]
+DEBUG main org.springframework.core.env.PropertySourcesPropertyResolver - Searching for key 'spring.liveBeansView.mbeanDomain' in [servletContextInitParams]
+DEBUG main org.springframework.core.env.PropertySourcesPropertyResolver - Searching for key 'spring.liveBeansView.mbeanDomain' in [jndiProperties]
+DEBUG main org.springframework.jndi.JndiTemplate - Looking up JNDI object with name [java:comp/env/spring.liveBeansView.mbeanDomain]
+DEBUG main jndi - InitialContextFactory.getInitialContext()
+DEBUG main jndi - Created initial context delegate for local namespace:org.eclipse.jetty.jndi.local.localContextRoot@3a627c80
+DEBUG main org.eclipse.jetty.jndi.java.javaURLContextFactory - >>> new root context requested 
+DEBUG main jndi - Looking up name="comp/env/spring.liveBeansView.mbeanDomain"
+DEBUG main jndi - Trying thread context classloader
+DEBUG main jndi - Looking up name="env/spring.liveBeansView.mbeanDomain"
+DEBUG main jndi - Looking up name="spring.liveBeansView.mbeanDomain"
+DEBUG main org.springframework.jndi.JndiLocatorDelegate - Converted JNDI name [java:comp/env/spring.liveBeansView.mbeanDomain] not found - trying original name [spring.liveBeansView.mbeanDomain]. javax.naming.NameNotFoundException; remaining name 'spring.liveBeansView.mbeanDomain'
+DEBUG main org.springframework.jndi.JndiTemplate - Looking up JNDI object with name [spring.liveBeansView.mbeanDomain]
+DEBUG main jndi - InitialContextFactory.getInitialContext()
+DEBUG main jndi - Created initial context delegate for local namespace:org.eclipse.jetty.jndi.local.localContextRoot@49aa766b
+DEBUG main jndi - Looking up name="spring.liveBeansView.mbeanDomain"
+DEBUG main org.springframework.jndi.JndiPropertySource - JNDI lookup for name [spring.liveBeansView.mbeanDomain] threw NamingException with message: null. Returning null.
+DEBUG main org.springframework.core.env.PropertySourcesPropertyResolver - Searching for key 'spring.liveBeansView.mbeanDomain' in [systemProperties]
+DEBUG main org.springframework.core.env.PropertySourcesPropertyResolver - Searching for key 'spring.liveBeansView.mbeanDomain' in [systemEnvironment]
+DEBUG main org.springframework.core.env.PropertySourcesPropertyResolver - Could not find key 'spring.liveBeansView.mbeanDomain' in any property source. Returning [null]
+DEBUG main org.springframework.web.context.ContextLoader - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+INFO main org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2132 ms
+DEBUG main org.eclipse.jetty.util.component.AbstractLifeCycle - starting OpenSessionInViewFilter
+DEBUG main org.eclipse.jetty.webapp.WebAppClassLoader - loaded class org.springframework.orm.hibernate4.support.OpenSessionInViewFilter from sun.misc.Launcher$AppClassLoader@73d16e93
+DEBUG main org.eclipse.jetty.servlet.BaseHolder - Holding class org.springframework.orm.hibernate4.support.OpenSessionInViewFilter from sun.misc.Launcher$AppClassLoader@73d16e93
+DEBUG main org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @3141ms OpenSessionInViewFilter
+DEBUG main org.springframework.web.context.support.StandardServletEnvironment - Adding [servletConfigInitParams] PropertySource with lowest search precedence
+DEBUG main org.springframework.web.context.support.StandardServletEnvironment - Adding [servletContextInitParams] PropertySource with lowest search precedence
+DEBUG main jndi - InitialContextFactory.getInitialContext()
+DEBUG main jndi - Created initial context delegate for local namespace:org.eclipse.jetty.jndi.local.localContextRoot@2dbd803f
+DEBUG main org.springframework.web.context.support.StandardServletEnvironment - Adding [jndiProperties] PropertySource with lowest search precedence
+DEBUG main org.springframework.web.context.support.StandardServletEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+DEBUG main org.springframework.web.context.support.StandardServletEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+DEBUG main org.springframework.web.context.support.StandardServletEnvironment - Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,jndiProperties,systemProperties,systemEnvironment]
+DEBUG main org.eclipse.jetty.servlet.FilterHolder - Filter.init org.springframework.orm.hibernate4.support.OpenSessionInViewFilter@529cfee5
+DEBUG main org.springframework.orm.hibernate4.support.OpenSessionInViewFilter - Initializing filter 'OpenSessionInViewFilter'
+DEBUG main org.springframework.orm.hibernate4.support.OpenSessionInViewFilter - Filter 'OpenSessionInViewFilter' configured successfully
+DEBUG main org.eclipse.jetty.util.component.AbstractLifeCycle - starting default@5c13d641==org.eclipse.jetty.servlet.DefaultServlet,0,false
+DEBUG main org.eclipse.jetty.webapp.WebAppClassLoader - loaded class org.eclipse.jetty.servlet.DefaultServlet
+DEBUG main org.eclipse.jetty.webapp.WebAppClassLoader - loaded class org.eclipse.jetty.servlet.DefaultServlet from sun.misc.Launcher$AppClassLoader@73d16e93
+DEBUG main org.eclipse.jetty.servlet.BaseHolder - Holding class org.eclipse.jetty.servlet.DefaultServlet from sun.misc.Launcher$AppClassLoader@73d16e93
+DEBUG main org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @3149ms default@5c13d641==org.eclipse.jetty.servlet.DefaultServlet,0,false
+DEBUG main org.eclipse.jetty.servlet.ServletHolder - Servlet.init org.eclipse.jetty.servlet.DefaultServlet@293cde83 for default
+DEBUG main org.eclipse.jetty.servlet.DefaultServlet - resource base = null
+DEBUG main org.eclipse.jetty.util.component.AbstractLifeCycle - starting jsp@19c47==org.eclipse.jetty.servlet.NoJspServlet,0,false
+DEBUG main org.eclipse.jetty.servlet.BaseHolder - Holding class org.eclipse.jetty.servlet.NoJspServlet from sun.misc.Launcher$AppClassLoader@73d16e93
+DEBUG main org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @3160ms jsp@19c47==org.eclipse.jetty.servlet.NoJspServlet,0,false
+DEBUG main org.eclipse.jetty.servlet.ServletHolder - Servlet.init org.eclipse.jetty.servlet.NoJspServlet@5e39850 for jsp
+DEBUG main org.eclipse.jetty.util.component.AbstractLifeCycle - starting wicket.contas@778ebf89==org.apache.wicket.protocol.http.WicketServlet,1,false
+DEBUG main org.eclipse.jetty.webapp.WebAppClassLoader - loaded class org.apache.wicket.protocol.http.WicketServlet from sun.misc.Launcher$AppClassLoader@73d16e93
+DEBUG main org.eclipse.jetty.servlet.BaseHolder - Holding class org.apache.wicket.protocol.http.WicketServlet from sun.misc.Launcher$AppClassLoader@73d16e93
+DEBUG main org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @3161ms wicket.contas@778ebf89==org.apache.wicket.protocol.http.WicketServlet,1,false
+DEBUG main org.eclipse.jetty.servlet.ServletHolder - Servlet.init org.apache.wicket.protocol.http.WicketServlet@78c1a023 for wicket.contas
+DEBUG main org.eclipse.jetty.webapp.WebAppClassLoader - loaded class org.apache.wicket.spring.SpringWebApplicationFactory from sun.misc.Launcher$AppClassLoader@73d16e93
+DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'wicketApplication'
+INFO main org.apache.wicket.util.file.WebXmlFile - web.xml: url mapping found for servlet with name wicket.contas: [/*]
+DEBUG main org.eclipse.jetty.webapp.WebAppClassLoader - loaded class org.apache.wicket.Initializer from sun.misc.Launcher$AppClassLoader@73d16e93
+INFO main org.apache.wicket.Application - [wicket.contas] init: Wicket core library initializer
+INFO main org.apache.wicket.RequestListenerInterface - registered listener interface [RequestListenerInterface name=IBehaviorListener, method=public abstract void org.apache.wicket.behavior.IBehaviorListener.onRequest()]
+INFO main org.apache.wicket.RequestListenerInterface - registered listener interface [RequestListenerInterface name=IFormSubmitListener, method=public abstract void org.apache.wicket.markup.html.form.IFormSubmitListener.onFormSubmitted()]
+INFO main org.apache.wicket.RequestListenerInterface - registered listener interface [RequestListenerInterface name=ILinkListener, method=public abstract void org.apache.wicket.markup.html.link.ILinkListener.onLinkClicked()]
+INFO main org.apache.wicket.RequestListenerInterface - registered listener interface [RequestListenerInterface name=IOnChangeListener, method=public abstract void org.apache.wicket.markup.html.form.IOnChangeListener.onSelectionChanged()]
+INFO main org.apache.wicket.RequestListenerInterface - registered listener interface [RequestListenerInterface name=IResourceListener, method=public abstract void org.apache.wicket.IResourceListener.onResourceRequested()]
+DEBUG main org.eclipse.jetty.webapp.WebAppClassLoader - loaded class org.apache.wicket.extensions.Initializer from sun.misc.Launcher$AppClassLoader@73d16e93
+INFO main org.apache.wicket.Application - [wicket.contas] init: Wicket extensions initializer
+DEBUG main org.eclipse.jetty.webapp.WebAppClassLoader - loaded class org.apache.wicket.devutils.debugbar.DebugBarInitializer from sun.misc.Launcher$AppClassLoader@73d16e93
+INFO main org.apache.wicket.Application - [wicket.contas] init: DevUtils DebugBar Initializer
+INFO main org.apache.wicket.protocol.http.WebApplication - [wicket.contas] Started Wicket version 7.1.0 in DEVELOPMENT mode
+INFO main org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.w.WebAppContext@35fb3008{/contas,file:/C:/workspace/contas/web/src/main/webapp/,AVAILABLE}{src/main/webapp}
+DEBUG main org.eclipse.jetty.webapp.WebAppContext - postConfigure o.e.j.w.WebAppContext@35fb3008{/contas,file:/C:/workspace/contas/web/src/main/webapp/,AVAILABLE}{src/main/webapp} with org.eclipse.jetty.webapp.WebInfConfiguration@394e1a0f
+DEBUG main org.eclipse.jetty.webapp.WebAppContext - postConfigure o.e.j.w.WebAppContext@35fb3008{/contas,file:/C:/workspace/contas/web/src/main/webapp/,AVAILABLE}{src/main/webapp} with org.eclipse.jetty.webapp.WebXmlConfiguration@528931cf
+DEBUG main org.eclipse.jetty.webapp.WebAppContext - postConfigure o.e.j.w.WebAppContext@35fb3008{/contas,file:/C:/workspace/contas/web/src/main/webapp/,AVAILABLE}{src/main/webapp} with org.eclipse.jetty.webapp.MetaInfConfiguration@3dfc5fb8
+DEBUG main org.eclipse.jetty.webapp.WebAppContext - postConfigure o.e.j.w.WebAppContext@35fb3008{/contas,file:/C:/workspace/contas/web/src/main/webapp/,AVAILABLE}{src/main/webapp} with org.eclipse.jetty.webapp.FragmentConfiguration@4d50efb8
+DEBUG main org.eclipse.jetty.webapp.WebAppContext - postConfigure o.e.j.w.WebAppContext@35fb3008{/contas,file:/C:/workspace/contas/web/src/main/webapp/,AVAILABLE}{src/main/webapp} with org.eclipse.jetty.plus.webapp.EnvConfiguration@7e2d773b
+DEBUG main org.eclipse.jetty.webapp.WebAppContext - postConfigure o.e.j.w.WebAppContext@35fb3008{/contas,file:/C:/workspace/contas/web/src/main/webapp/,AVAILABLE}{src/main/webapp} with org.eclipse.jetty.plus.webapp.PlusConfiguration@38bc8ab5
+DEBUG main jndi - InitialContextFactory.getInitialContext()
+DEBUG main jndi - Created initial context delegate for local namespace:org.eclipse.jetty.jndi.local.localContextRoot@48535004
+DEBUG main org.eclipse.jetty.jndi.java.javaURLContextFactory - >>> new root context requested 
+DEBUG main jndi - Looking up name="comp"
+DEBUG main jndi - Trying thread context classloader
+DEBUG main org.eclipse.jetty.webapp.WebAppContext - postConfigure o.e.j.w.WebAppContext@35fb3008{/contas,file:/C:/workspace/contas/web/src/main/webapp/,AVAILABLE}{src/main/webapp} with org.eclipse.jetty.annotations.AnnotationConfiguration@7a9273a8
+DEBUG main org.eclipse.jetty.webapp.WebAppContext - postConfigure o.e.j.w.WebAppContext@35fb3008{/contas,file:/C:/workspace/contas/web/src/main/webapp/,AVAILABLE}{src/main/webapp} with org.eclipse.jetty.webapp.JettyWebXmlConfiguration@e874448
+DEBUG main org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @3249ms o.e.j.w.WebAppContext@35fb3008{/contas,file:/C:/workspace/contas/web/src/main/webapp/,AVAILABLE}{src/main/webapp}
+DEBUG main org.eclipse.jetty.util.component.AbstractLifeCycle - starting ServerConnector@2a18f23c{HTTP/1.1}{0.0.0.0:8080}
+DEBUG main org.eclipse.jetty.jmx.MBeanContainer - beanAdded ServerConnector@2a18f23c{HTTP/1.1}{0.0.0.0:8080}->sun.nio.ch.ServerSocketChannelImpl[/0:0:0:0:0:0:0:0:8080]
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - ObjectMbean: mbeanFor sun.nio.ch.ServerSocketChannelImpl[/0:0:0:0:0:0:0:0:8080] mClass=class org.eclipse.jetty.jmx.ObjectMBean
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - mbeanFor sun.nio.ch.ServerSocketChannelImpl[/0:0:0:0:0:0:0:0:8080] is org.eclipse.jetty.jmx.ObjectMBean@64c4c01
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influence Count: 13
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - No @ManagedObject declared on class sun.nio.ch.ServerSocketChannelImpl
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: org.eclipse.jetty.jmx.ObjectMBean
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Annotations not found for: org.eclipse.jetty.jmx.ObjectMBean
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: sun.nio.ch.ServerSocketChannelImpl
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Annotations not found for: sun.nio.ch.ServerSocketChannelImpl
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: java.nio.channels.ServerSocketChannel
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Annotations not found for: java.nio.channels.ServerSocketChannel
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: java.nio.channels.spi.AbstractSelectableChannel
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Annotations not found for: java.nio.channels.spi.AbstractSelectableChannel
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: java.nio.channels.SelectableChannel
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Annotations not found for: java.nio.channels.SelectableChannel
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: java.nio.channels.spi.AbstractInterruptibleChannel
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Annotations not found for: java.nio.channels.spi.AbstractInterruptibleChannel
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: java.lang.Object
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Annotations not found for: java.lang.Object
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: java.nio.channels.Channel
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Annotations not found for: java.nio.channels.Channel
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: java.io.Closeable
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Annotations not found for: java.io.Closeable
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: java.lang.AutoCloseable
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Annotations not found for: java.lang.AutoCloseable
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: java.nio.channels.InterruptibleChannel
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Annotations not found for: java.nio.channels.InterruptibleChannel
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: java.nio.channels.NetworkChannel
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Annotations not found for: java.nio.channels.NetworkChannel
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: sun.nio.ch.SelChImpl
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Annotations not found for: sun.nio.ch.SelChImpl
+DEBUG main org.eclipse.jetty.jmx.MBeanContainer - Registered sun.nio.ch:context=HTTP/1.1@2a18f23c,type=serversocketchannelimpl,id=0
+DEBUG main org.eclipse.jetty.util.component.ContainerLifeCycle - ServerConnector@2a18f23c{HTTP/1.1}{0.0.0.0:8080} added {sun.nio.ch.ServerSocketChannelImpl[/0:0:0:0:0:0:0:0:8080],POJO}
+DEBUG main org.eclipse.jetty.util.component.AbstractLifeCycle - starting org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@649d209a
+DEBUG main org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @3258ms org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@649d209a
+DEBUG main org.eclipse.jetty.jmx.MBeanContainer - beanAdded HttpConnectionFactory@6833ce2c{HTTP/1.1}->HttpConfiguration@725bef66{32768/8192,8192/8192,https://:8443,[]}
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - ObjectMbean: mbeanFor HttpConfiguration@725bef66{32768/8192,8192/8192,https://:8443,[]} mClass=class org.eclipse.jetty.jmx.ObjectMBean
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - mbeanFor HttpConfiguration@725bef66{32768/8192,8192/8192,https://:8443,[]} is org.eclipse.jetty.jmx.ObjectMBean@1aa99005
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influence Count: 3
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: org.eclipse.jetty.jmx.ObjectMBean
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Annotations not found for: org.eclipse.jetty.jmx.ObjectMBean
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: org.eclipse.jetty.server.HttpConfiguration
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Attribute Annotation found for: getRequestHeaderSize
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - defineAttribute requestHeaderSize false:false:class org.eclipse.jetty.server.HttpConfiguration:The maximum allowed size in bytes for a HTTP request header
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - DeclaredSetter: 
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Attribute Annotation found for: getResponseHeaderSize
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - defineAttribute responseHeaderSize false:false:class org.eclipse.jetty.server.HttpConfiguration:The maximum allowed size in bytes for a HTTP response header
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - DeclaredSetter: 
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Attribute Annotation found for: getOutputAggregationSize
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - defineAttribute outputAggregationSize false:false:class org.eclipse.jetty.server.HttpConfiguration:The maximum size in bytes for HTTP output to be aggregated
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - DeclaredSetter: 
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Attribute Annotation found for: getOutputBufferSize
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - defineAttribute outputBufferSize false:false:class org.eclipse.jetty.server.HttpConfiguration:The size in bytes of the output buffer used to aggregate HTTP output
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - DeclaredSetter: 
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Attribute Annotation found for: getHeaderCacheSize
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - defineAttribute headerCacheSize false:false:class org.eclipse.jetty.server.HttpConfiguration:The maximum allowed size in bytes for a HTTP header field cache
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - DeclaredSetter: 
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Attribute Annotation found for: getSecurePort
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - defineAttribute securePort false:false:class org.eclipse.jetty.server.HttpConfiguration:The port to which Integral or Confidential security constraints are redirected
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - DeclaredSetter: 
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Attribute Annotation found for: getSecureScheme
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - defineAttribute secureScheme false:false:class org.eclipse.jetty.server.HttpConfiguration:The scheme with which Integral or Confidential security constraints are redirected
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - DeclaredSetter: 
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Attribute Annotation found for: getSendDateHeader
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - defineAttribute sendDateHeader false:false:class org.eclipse.jetty.server.HttpConfiguration:if true, include the date in HTTP headers
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - DeclaredSetter: 
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Attribute Annotation found for: getSendServerVersion
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - defineAttribute sendServerVersion false:false:class org.eclipse.jetty.server.HttpConfiguration:if true, send the Server header in responses
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - DeclaredSetter: 
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Attribute Annotation found for: isDelayDispatchUntilContent
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - defineAttribute delayDispatchUntilContent false:false:class org.eclipse.jetty.server.HttpConfiguration:if true, delay the application dispatch until content is available
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - DeclaredSetter: 
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Attribute Annotation found for: getSendXPoweredBy
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - defineAttribute sendXPoweredBy false:false:class org.eclipse.jetty.server.HttpConfiguration:if true, send the X-Powered-By header in responses
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - DeclaredSetter: 
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: java.lang.Object
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Annotations not found for: java.lang.Object
+DEBUG main org.eclipse.jetty.jmx.MBeanContainer - Registered org.eclipse.jetty.server:context=HTTP/1.1@2a18f23c,type=httpconfiguration,id=0
+DEBUG main org.eclipse.jetty.jmx.MBeanContainer - beanAdded HttpConnectionFactory@6833ce2c{HTTP/1.1}->org.eclipse.jetty.jmx.MBeanContainer@6c3708b3
+DEBUG main org.eclipse.jetty.util.component.ContainerLifeCycle - HttpConnectionFactory@6833ce2c{HTTP/1.1} added {org.eclipse.jetty.jmx.MBeanContainer@6c3708b3,UNMANAGED}
+DEBUG main org.eclipse.jetty.util.component.AbstractLifeCycle - starting HttpConnectionFactory@6833ce2c{HTTP/1.1}
+DEBUG main org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @3261ms HttpConnectionFactory@6833ce2c{HTTP/1.1}
+DEBUG main org.eclipse.jetty.util.component.AbstractLifeCycle - starting org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@ea4a92b
+DEBUG main org.eclipse.jetty.util.component.AbstractLifeCycle - starting org.eclipse.jetty.io.SelectorManager$ManagedSelector@3bead518 keys=-1 selected=-1
+DEBUG main org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @3269ms org.eclipse.jetty.io.SelectorManager$ManagedSelector@3bead518 keys=0 selected=0
+DEBUG main org.eclipse.jetty.util.component.AbstractLifeCycle - starting org.eclipse.jetty.io.SelectorManager$ManagedSelector@1fde4f40 keys=-1 selected=-1
+DEBUG qtp1983747920-14-selector-ServerConnectorManager@ea4a92b/0 org.eclipse.jetty.io.SelectorManager - Starting Thread[qtp1983747920-14-selector-ServerConnectorManager@ea4a92b/0,5,main] on org.eclipse.jetty.io.SelectorManager$ManagedSelector@3bead518 keys=0 selected=0
+DEBUG qtp1983747920-14-selector-ServerConnectorManager@ea4a92b/0 org.eclipse.jetty.io.SelectorManager - Selector loop waiting on select
+DEBUG main org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @3271ms org.eclipse.jetty.io.SelectorManager$ManagedSelector@1fde4f40 keys=0 selected=0
+DEBUG main org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @3271ms org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@ea4a92b
+DEBUG qtp1983747920-19-selector-ServerConnectorManager@ea4a92b/1 org.eclipse.jetty.io.SelectorManager - Starting Thread[qtp1983747920-19-selector-ServerConnectorManager@ea4a92b/1,5,main] on org.eclipse.jetty.io.SelectorManager$ManagedSelector@1fde4f40 keys=0 selected=0
+DEBUG qtp1983747920-19-selector-ServerConnectorManager@ea4a92b/1 org.eclipse.jetty.io.SelectorManager - Selector loop waiting on select
+DEBUG main org.eclipse.jetty.jmx.MBeanContainer - beanAdded ServerConnector@2a18f23c{HTTP/1.1}{0.0.0.0:8080}->acceptor-0@11a00961
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - ObjectMbean: mbeanFor acceptor-0@11a00961 mClass=class org.eclipse.jetty.jmx.ObjectMBean
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - mbeanFor acceptor-0@11a00961 is org.eclipse.jetty.jmx.ObjectMBean@7ce9e05a
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influence Count: 4
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - No @ManagedObject declared on class org.eclipse.jetty.server.AbstractConnector$Acceptor
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: org.eclipse.jetty.jmx.ObjectMBean
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Annotations not found for: org.eclipse.jetty.jmx.ObjectMBean
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: org.eclipse.jetty.server.AbstractConnector.Acceptor
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Annotations not found for: org.eclipse.jetty.server.AbstractConnector.Acceptor
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: java.lang.Object
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Annotations not found for: java.lang.Object
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: java.lang.Runnable
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Annotations not found for: java.lang.Runnable
+DEBUG main org.eclipse.jetty.jmx.MBeanContainer - Registered org.eclipse.jetty.server:context=HTTP/1.1@2a18f23c,type=abstractconnector$acceptor,id=0
+DEBUG main org.eclipse.jetty.util.component.ContainerLifeCycle - ServerConnector@2a18f23c{HTTP/1.1}{0.0.0.0:8080} added {acceptor-0@11a00961,POJO}
+INFO main org.eclipse.jetty.server.ServerConnector - Started ServerConnector@2a18f23c{HTTP/1.1}{0.0.0.0:8080}
+DEBUG main org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @3274ms ServerConnector@2a18f23c{HTTP/1.1}{0.0.0.0:8080}
+DEBUG main org.eclipse.jetty.util.component.AbstractLifeCycle - starting ServerConnector@48140564{SSL-http/1.1}{0.0.0.0:8443}
+DEBUG main org.eclipse.jetty.jmx.MBeanContainer - beanAdded ServerConnector@48140564{SSL-http/1.1}{0.0.0.0:8443}->sun.nio.ch.ServerSocketChannelImpl[/0:0:0:0:0:0:0:0:8443]
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - ObjectMbean: mbeanFor sun.nio.ch.ServerSocketChannelImpl[/0:0:0:0:0:0:0:0:8443] mClass=class org.eclipse.jetty.jmx.ObjectMBean
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - mbeanFor sun.nio.ch.ServerSocketChannelImpl[/0:0:0:0:0:0:0:0:8443] is org.eclipse.jetty.jmx.ObjectMBean@53ac845a
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influence Count: 13
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - No @ManagedObject declared on class sun.nio.ch.ServerSocketChannelImpl
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: org.eclipse.jetty.jmx.ObjectMBean
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Annotations not found for: org.eclipse.jetty.jmx.ObjectMBean
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: sun.nio.ch.ServerSocketChannelImpl
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Annotations not found for: sun.nio.ch.ServerSocketChannelImpl
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: java.nio.channels.ServerSocketChannel
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Annotations not found for: java.nio.channels.ServerSocketChannel
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: java.nio.channels.spi.AbstractSelectableChannel
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Annotations not found for: java.nio.channels.spi.AbstractSelectableChannel
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: java.nio.channels.SelectableChannel
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Annotations not found for: java.nio.channels.SelectableChannel
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: java.nio.channels.spi.AbstractInterruptibleChannel
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Annotations not found for: java.nio.channels.spi.AbstractInterruptibleChannel
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: java.lang.Object
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Annotations not found for: java.lang.Object
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: java.nio.channels.Channel
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Annotations not found for: java.nio.channels.Channel
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: java.io.Closeable
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Annotations not found for: java.io.Closeable
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: java.lang.AutoCloseable
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Annotations not found for: java.lang.AutoCloseable
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: java.nio.channels.InterruptibleChannel
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Annotations not found for: java.nio.channels.InterruptibleChannel
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: java.nio.channels.NetworkChannel
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Annotations not found for: java.nio.channels.NetworkChannel
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: sun.nio.ch.SelChImpl
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Annotations not found for: sun.nio.ch.SelChImpl
+DEBUG main org.eclipse.jetty.jmx.MBeanContainer - Registered sun.nio.ch:context=SSL-http/1.1@48140564,type=serversocketchannelimpl,id=0
+DEBUG main org.eclipse.jetty.util.component.ContainerLifeCycle - ServerConnector@48140564{SSL-http/1.1}{0.0.0.0:8443} added {sun.nio.ch.ServerSocketChannelImpl[/0:0:0:0:0:0:0:0:8443],POJO}
+DEBUG main org.eclipse.jetty.util.component.AbstractLifeCycle - starting org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@1d251891
+DEBUG main org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @3278ms org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@1d251891
+DEBUG main org.eclipse.jetty.jmx.MBeanContainer - beanAdded SslConnectionFactory@e580929{SSL-http/1.1}->SslContextFactory@1cd072a9(null,null)
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - ObjectMbean: mbeanFor SslContextFactory@1cd072a9(null,null) mClass=class org.eclipse.jetty.jmx.ObjectMBean
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - mbeanFor SslContextFactory@1cd072a9(null,null) is org.eclipse.jetty.jmx.ObjectMBean@5136207f
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influence Count: 5
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - No @ManagedObject declared on class org.eclipse.jetty.util.ssl.SslContextFactory
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: org.eclipse.jetty.jmx.ObjectMBean
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Annotations not found for: org.eclipse.jetty.jmx.ObjectMBean
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: org.eclipse.jetty.util.ssl.SslContextFactory
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Annotations not found for: org.eclipse.jetty.util.ssl.SslContextFactory
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: org.eclipse.jetty.util.component.AbstractLifeCycle
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Attribute Annotation found for: getState
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - defineAttribute state false:true:class org.eclipse.jetty.util.ssl.SslContextFactory:Lifecycle State for this instance
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Attribute Annotation found for: getStopTimeout
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - defineAttribute stopTimeout false:false:class org.eclipse.jetty.util.ssl.SslContextFactory:The stop timeout in milliseconds
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - DeclaredSetter: 
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: java.lang.Object
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Annotations not found for: java.lang.Object
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: org.eclipse.jetty.util.component.LifeCycle
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Method Annotation found for: start
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - defineOperation start false:ACTION:Starts the instance
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Method Cache: start()
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Method Annotation found for: stop
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - defineOperation stop false:ACTION:Stops the instance
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Method Cache: stop()
+DEBUG main org.eclipse.jetty.jmx.MBeanContainer - Registered org.eclipse.jetty.util.ssl:context=SSL-http/1.1@48140564,type=sslcontextfactory,id=0
+DEBUG main org.eclipse.jetty.jmx.MBeanContainer - beanAdded SslConnectionFactory@e580929{SSL-http/1.1}->org.eclipse.jetty.jmx.MBeanContainer@6c3708b3
+DEBUG main org.eclipse.jetty.util.component.ContainerLifeCycle - SslConnectionFactory@e580929{SSL-http/1.1} added {org.eclipse.jetty.jmx.MBeanContainer@6c3708b3,UNMANAGED}
+DEBUG main org.eclipse.jetty.util.component.AbstractLifeCycle - starting SslConnectionFactory@e580929{SSL-http/1.1}
+DEBUG main org.eclipse.jetty.util.component.AbstractLifeCycle - starting SslContextFactory@1cd072a9(null,null)
+DEBUG main org.eclipse.jetty.util.ssl.SslContextFactory - Enabled Protocols [TLSv1, TLSv1.1, TLSv1.2] of [SSLv2Hello, SSLv3, TLSv1, TLSv1.1, TLSv1.2]
+DEBUG main org.eclipse.jetty.util.ssl.SslContextFactory - Enabled Ciphers   [TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_RSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA, TLS_EMPTY_RENEGOTIATION_INFO_SCSV] of [TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_RSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA, TLS_EMPTY_RENEGOTIATION_INFO_SCSV, TLS_DH_anon_WITH_AES_128_GCM_SHA256, TLS_DH_anon_WITH_AES_128_CBC_SHA256, TLS_ECDH_anon_WITH_AES_128_CBC_SHA, TLS_DH_anon_WITH_AES_128_CBC_SHA, TLS_ECDH_anon_WITH_3DES_EDE_CBC_SHA, SSL_DH_anon_WITH_3DES_EDE_CBC_SHA, SSL_RSA_WITH_DES_CBC_SHA, SSL_DHE_RSA_WITH_DES_CBC_SHA, SSL_DHE_DSS_WITH_DES_CBC_SHA, SSL_DH_anon_WITH_DES_CBC_SHA, SSL_RSA_EXPORT_WITH_DES40_CBC_SHA, SSL_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA, SSL_DHE_DSS_EXPORT_WITH_DES40_CBC_SHA, SSL_DH_anon_EXPORT_WITH_DES40_CBC_SHA, TLS_RSA_WITH_NULL_SHA256, TLS_ECDHE_ECDSA_WITH_NULL_SHA, TLS_ECDHE_RSA_WITH_NULL_SHA, SSL_RSA_WITH_NULL_SHA, TLS_ECDH_ECDSA_WITH_NULL_SHA, TLS_ECDH_RSA_WITH_NULL_SHA, TLS_ECDH_anon_WITH_NULL_SHA, SSL_RSA_WITH_NULL_MD5, TLS_KRB5_WITH_3DES_EDE_CBC_SHA, TLS_KRB5_WITH_3DES_EDE_CBC_MD5, TLS_KRB5_WITH_DES_CBC_SHA, TLS_KRB5_WITH_DES_CBC_MD5, TLS_KRB5_EXPORT_WITH_DES_CBC_40_SHA, TLS_KRB5_EXPORT_WITH_DES_CBC_40_MD5]
+DEBUG main org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @3446ms SslContextFactory@1cd072a9(null,null)
+DEBUG main org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @3446ms SslConnectionFactory@e580929{SSL-http/1.1}
+DEBUG main org.eclipse.jetty.jmx.MBeanContainer - beanAdded HttpConnectionFactory@7c75222b{HTTP/1.1}->HttpConfiguration@4c203ea1{32768/8192,8192/8192,https://:8443,[SecureRequestCustomizer@27f674d]}
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - ObjectMbean: mbeanFor HttpConfiguration@4c203ea1{32768/8192,8192/8192,https://:8443,[SecureRequestCustomizer@27f674d]} mClass=class org.eclipse.jetty.jmx.ObjectMBean
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - mbeanFor HttpConfiguration@4c203ea1{32768/8192,8192/8192,https://:8443,[SecureRequestCustomizer@27f674d]} is org.eclipse.jetty.jmx.ObjectMBean@1e008f36
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influence Count: 3
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: org.eclipse.jetty.jmx.ObjectMBean
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Annotations not found for: org.eclipse.jetty.jmx.ObjectMBean
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Influenced by: org.eclipse.jetty.server.HttpConfiguration
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Attribute Annotation found for: getRequestHeaderSize
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - defineAttribute requestHeaderSize false:false:class org.eclipse.jetty.server.HttpConfiguration:The maximum allowed size in bytes for a HTTP request header
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - DeclaredSetter: 
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Attribute Annotation found for: getResponseHeaderSize
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - defineAttribute responseHeaderSize false:false:class org.eclipse.jetty.server.HttpConfiguration:The maximum allowed size in bytes for a HTTP response header
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - DeclaredSetter: 
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Attribute Annotation found for: getOutputAggregationSize
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - defineAttribute outputAggregationSize false:false:class org.eclipse.jetty.server.HttpConfiguration:The maximum size in bytes for HTTP output to be aggregated
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - DeclaredSetter: 
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Attribute Annotation found for: getOutputBufferSize
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - defineAttribute outputBufferSize false:false:class org.eclipse.jetty.server.HttpConfiguration:The size in bytes of the output buffer used to aggregate HTTP output
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - DeclaredSetter: 
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Attribute Annotation found for: getHeaderCacheSize
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - defineAttribute headerCacheSize false:false:class org.eclipse.jetty.server.HttpConfiguration:The maximum allowed size in bytes for a HTTP header field cache
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - DeclaredSetter: 
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Attribute Annotation found for: getSecurePort
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - defineAttribute securePort false:false:class org.eclipse.jetty.server.HttpConfiguration:The port to which Integral or Confidential security constraints are redirected
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - DeclaredSetter: 
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Attribute Annotation found for: getSecureScheme
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - defineAttribute secureScheme false:false:class org.eclipse.jetty.server.HttpConfiguration:The scheme with which Integral or Confidential security constraints are redirected
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - DeclaredSetter: 
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Attribute Annotation found for: getSendDateHeader
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - defineAttribute sendDateHeader false:false:class org.eclipse.jetty.server.HttpConfiguration:if true, include the date in HTTP headers
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - DeclaredSetter: 
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Attribute Annotation found for: getSendServerVersion
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - defineAttribute sendServerVersion false:false:class org.eclipse.jetty.server.HttpConfiguration:if true, send the Server header in responses
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - DeclaredSetter: 
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - Attribute Annotation found for: isDelayDispatchUntilContent
+DEBUG main org.eclipse.jetty.jmx.ObjectMBean - defineAttribute delayDispatchUntilContent false:false:class org.eclipse.jetty.server.HttpConfiguration:if true, delay the application dispatch until content is available

@@ -1,0 +1,36 @@
+<wicket:panel xmlns:wicket="http://wicket.apache.org/">
+<button wicket:id="btnNovaConta" class="btn btn-primary" data-toggle="modal" data-target="#modalConta">Nova conta</button>
+<div class="modal fade" id="modalConta" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button wicket:id="btnFecharModal" type="button" class="close" data-dismiss="modal">&times;</button>
+				<h3 class="modal-title" style="text-align: center">Nova Conta</h3>
+			</div>
+			<form wicket:id="formNovaConta">
+				<div class="modal-body">
+					<div class="form-group required">
+						<label>Titular</label>
+						<input wicket:id="titular" class="form-control" type="text" required/>
+					</div>
+					<div class="form-group required">
+						<label>Número</label>
+						<input wicket:id="numero" class="form-control" type="text"  required/>
+					</div>
+					<div class="form-group required">
+						<label>Agência</label>
+						<input wicket:id="agencia" class="form-control" type="text"  required/>
+					</div>
+					<div class="form-group required">
+						<label>Banco</label>
+						<input wicket:id="banco" class="form-control" type="text"  required/>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button wicket:id="btnSalvarConta" type="submit" class="btn btn-primary" data-dismiss="modal">Salvar</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+</wicket:panel>
